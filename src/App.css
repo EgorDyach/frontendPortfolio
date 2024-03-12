@@ -1,0 +1,142 @@
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  padding: 60px 0 0;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.item {
+  max-width: 40%;
+  width: 100%;
+  position: relative;
+  padding: 90px 30px;
+  margin-bottom: 50px;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.item__descr {
+  transform: translateY(500%);
+  font-weight: 500;
+  transition: .7s ease-in-out;
+}
+
+.item__text {
+  z-index: 1;
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  transition: .4s ease-in-out;
+}
+
+.itemActive .item__descr {
+  transform: translateY(0px);
+}
+
+.itemActive .item__text {
+  transform: translateY(0);
+}
+
+.item__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.item::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.item__text::after {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: '';
+}
+
+.container {
+  width: 100%;
+  justify-content: space-around;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .item {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 850px) {
+  .item {
+    padding: 90px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .item {
+    padding: 40px 10px;
+  }
+
+  .item__text {
+    font-size: 16px;
+  }
+
+  .item__descr {
+    font-size: 12px;
+  }
+}
